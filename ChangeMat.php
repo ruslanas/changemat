@@ -25,10 +25,9 @@ class ChangeMat {
         $minTotal = 0;
         $count = floor($amount / $notes[0]);
         
-        for ($i = 0; $i <= $count; $i++) {
+        for ($i = $count; $i >= 0; $i--) {
             
-            // avoid division by zero
-            $remainder = $i ? $amount - $i * $notes[0] : $amount;
+            $remainder = $amount - $i * $notes[0];
 
             // remove largest bill from array in next call
             $res = $this->minNotes($remainder, array_slice($notes, 1));
