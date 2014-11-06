@@ -28,6 +28,7 @@ class ChangeMatTest extends PHPUnit_Framework_TestCase {
         
         // large amount simple case
         $this->assertEquals(10000000, $this->object->minNotes(1000000000, [100, 50, 20, 10, 5, 1]));
+        // performance
         $this->assertEquals(11, $this->object->minNotes(1005, [100, 50, 20, 10, 5, 1]));
         // primary
         $this->assertEquals(0, $this->object->minNotes(13, [100, 50, 20, 10, 5]));

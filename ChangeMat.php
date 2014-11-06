@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author Ruslanas Balčiūnas <http://ruslanas.com>
  */
@@ -6,7 +7,6 @@ class ChangeMat {
 
     public function minNotes($amount, $notes = []) {
         rsort($notes); // sort highest to lowest
-
         // ran out of notes
         if (sizeof($notes) < 1) {
             return 0;
@@ -15,6 +15,8 @@ class ChangeMat {
         // multiple of largest bill
         if ($amount % $notes[0] == 0) {
             return $amount / $notes[0];
+        } elseif (sizeof($notes) == 1) {
+            return 0;
         }
 
         // exclude largest bill
@@ -24,9 +26,13 @@ class ChangeMat {
 
         $minTotal = 0;
         $count = floor($amount / $notes[0]);
-        
-        for ($i = $count; $i >= 0; $i--) {
-            
+
+        for ($i = 0; $i <= $count; $i++) {
+
+            // break if no better solution possible
+            if($minTotal && ($i > $minTotal - 2)) {
+                break;
+            }
             $remainder = $amount - $i * $notes[0];
 
             // remove largest bill from array in next call
