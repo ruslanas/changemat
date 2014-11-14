@@ -1,5 +1,16 @@
 {
-    "repositories": [{
+    "name": "ruslanas/changemat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruslanas Balciunas",
+            "email": "ruslanas.com@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "repositories": [
+        {
             "type": "package",
             "package": {
                 "name": "ruslanas/changemat",
@@ -9,5 +20,6 @@
                     }
                 }
             }
-        }]
+        }
+    ]
 }
