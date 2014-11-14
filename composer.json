@@ -1,5 +1,8 @@
 {
     "name": "ruslanas/changemat",
+    "type": "library",
+    "description": "Money calculator",
+    "homepage": "http://github.com/ruslanas/changemat",
     "license": "MIT",
     "authors": [
         {
@@ -7,8 +10,9 @@
             "email": "ruslanas.com@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=5.2.0"
+    },
     "autoload": {
         "psr-0": {
             "Lib": "src"
