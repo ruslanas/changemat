@@ -1,6 +1,6 @@
 <?php
 
-require '../ChangeMat.php';
+require '../MoneyCalculator.php';
 
 class ChangeMatTest extends PHPUnit_Framework_TestCase {
 
