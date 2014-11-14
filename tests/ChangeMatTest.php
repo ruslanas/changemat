@@ -1,6 +1,7 @@
 <?php
 
-require '../src/Lib/MoneyCalculator.php';
+use Ruslanas\MoneyCalculator;
+require '../src/Ruslanas/MoneyCalculator/MoneyCalculator.php';
 
 class ChangeMatTest extends PHPUnit_Framework_TestCase {
 
@@ -10,7 +11,7 @@ class ChangeMatTest extends PHPUnit_Framework_TestCase {
     protected $object;
 
     protected function setUp() {
-        $this->object = new MoneyCalculator();
+        $this->object = new Ruslanas\MoneyCalculator\MoneyCalculator();
     }
 
     protected function tearDown() {
@@ -21,6 +22,7 @@ class ChangeMatTest extends PHPUnit_Framework_TestCase {
      * @covers ChangeMat::sumWords
      */
     public function testSumWords() {
+        $this->assertEquals('vienuolika tūkstančių', $this->object->sumWords(11000));
         $this->assertEquals('dešimt milijonų du', $this->object->sumWords(10000002));
         $this->assertEquals('dvidešimt tūkstančių keturiasdešimt', $this->object->sumWords(20040));
         $this->assertEquals('penkiasdešimt vienas tūkstantis', $this->object->sumWords(51000));

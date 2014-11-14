@@ -1,12 +1,12 @@
 <?php
 header('Content-Type: text/plain;charset=utf-8');
 
-require_once 'Lib/MoneyCalculator.php';
+require_once 'Ruslanas/MoneyCalculator/MoneyCalculator.php';
 
 $notes = [100, 50, 20, 10, 5, 1];
 $amounts = [102, 135, 160, 120, 136, 111, 105, 23, 17];
 
-$changemat = new MoneyCalculator($notes);
+$changemat = new Ruslanas\MoneyCalculator\MoneyCalculator($notes);
 
 print_r($notes);
 

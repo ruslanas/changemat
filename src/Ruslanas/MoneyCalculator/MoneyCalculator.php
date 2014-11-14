@@ -72,7 +72,7 @@ class MoneyCalculator {
 
         if (!empty($a)) {
             $words .= ' ';
-            if ($dd % 10 == 1) {
+            if ($dd % 10 == 1 && $dd != 11) {
                 $words .= $a[0];
             } elseif ($dd > 9 && $dd < 21) {
                 $words .= $a[2];
