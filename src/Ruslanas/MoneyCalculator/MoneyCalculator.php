@@ -1,5 +1,5 @@
 <?php
-namespace Ruslanas\MoneyCaclulator;
+namespace Ruslanas\MoneyCalculator;
 
 /**
  * @author Ruslanas Balčiūnas <ruslanas.com@gmail.com>
