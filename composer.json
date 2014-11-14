@@ -9,17 +9,9 @@
     ],
     "minimum-stability": "dev",
     "require": {},
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "ruslanas/changemat",
-                "autoload": {
-                    "psr-0": {
-                        "Lib": "src"
-                    }
-                }
-            }
+    "autoload": {
+        "psr-0": {
+            "Lib": "src"
         }
-    ]
+    }
 }
