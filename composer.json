@@ -2,7 +2,7 @@
     "name": "ruslanas/changemat",
     "autoload":  {
         "psr-0": {
-            "Lib": ""
+            "Lib": "src"
         }
     }
 }
