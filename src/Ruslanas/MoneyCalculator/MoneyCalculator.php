@@ -1,7 +1,8 @@
 <?php
+namespace Ruslanas\MoneyCaclulator;
 
 /**
- * @author Ruslanas Balčiūnas <http://ruslanas.com>
+ * @author Ruslanas Balčiūnas <ruslanas.com@gmail.com>
  */
 class MoneyCalculator {
 
