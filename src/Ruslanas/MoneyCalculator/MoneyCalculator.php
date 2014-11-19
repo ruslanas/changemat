@@ -49,7 +49,7 @@ class MoneyCalculator {
         if ($t > 0) {
             $words .= ' '.$this->sumWords($t, ['milijonas', 'milijonai', 'milijonų']);
         }
-        
+
         $t = floor($lt % 1000000 / 1000);
         if ($t > 0) {
             $words .= ' '.$this->sumWords($t, ['tūkstantis', 'tūkstančiai', 'tūkstančių']);
@@ -74,7 +74,7 @@ class MoneyCalculator {
             $words .= ' ';
             if ($dd % 10 == 1 && $dd != 11) {
                 $words .= $a[0];
-            } elseif ($dd > 9 && $dd < 21) {
+            } elseif (($dd > 9 && $dd < 21) || $dd % 10 == 0) {
                 $words .= $a[2];
             } else {
                 $words .= $a[1];

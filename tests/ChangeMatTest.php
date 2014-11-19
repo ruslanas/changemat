@@ -22,6 +22,7 @@ class ChangeMatTest extends PHPUnit_Framework_TestCase {
      * @covers ChangeMat::sumWords
      */
     public function testSumWords() {
+        $this->assertEquals('aštuoniasdešimt litų', $this->object->sumWords(80, ['litas', 'litai', 'litų']));
         $this->assertEquals('vienuolika tūkstančių', $this->object->sumWords(11000));
         $this->assertEquals('dešimt milijonų du', $this->object->sumWords(10000002));
         $this->assertEquals('dvidešimt tūkstančių keturiasdešimt', $this->object->sumWords(20040));
@@ -45,7 +46,7 @@ class ChangeMatTest extends PHPUnit_Framework_TestCase {
         // test note input order
         $this->assertEquals(4, $this->object->minNotes(135, [10, 5, 1, 100, 50, 20]));
         $this->assertEquals(1, $this->object->minNotes(100, [100, 50, 20, 10, 5, 1]));
-        
+
         // large amount simple case
         $this->assertEquals(10000000, $this->object->minNotes(1000000000, [100, 50, 20, 10, 5, 1]));
         // performance
