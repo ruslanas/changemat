@@ -63,9 +63,7 @@ class MoneyCalculator {
         $dd = $lt % 100;
 
         if (!empty($digits[$dd])) {
-            if ($dd != 1 || empty($a)) {
-                $words .= ' '.$digits[$dd];
-            }
+            $words .= ' '.$digits[$dd];
         } elseif ($dd != 0) {
             $words .= ' '.$digits[floor($dd / 10) * 10] . ' ' . $digits[$dd % 10];
         }
